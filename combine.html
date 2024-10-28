@@ -1,0 +1,319 @@
+
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The G.T. Road Booking Experience</title>
+    <style>
+    body, html {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color:#fde3c9;
+    }
+   
+    .navbar {
+    background-color: #e1af6d;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.navbar a.active {
+    background-color: #f2f2f2;
+    color: white;
+}
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+    }
+    .full-width {
+        width: 100%;
+    }
+    h2 {
+        color: #333;
+        border-bottom: 2px solid #4a90e2;
+        padding-bottom: 10px;
+    }
+    .info-box {
+        background-color: #e8f4ff;
+        border: 1px solid #b8d8ff;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .input-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input[type="text"], input[type="number"], select, textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .date-selector {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    .date-button {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        flex: 1;
+        margin: 0 5px;
+        text-align: center;
+    }
+    .date-button.active {
+        background-color: #4a90e2;
+        color: white;
+    }
+    .time-slot {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+    .proceed-btn, .pay-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+    }
+    .restaurant-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .icon {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .feature {
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        padding: 5px 10px;
+        margin: 5px;
+        font-size: 14px;
+    }
+    .pay-button {
+        background-color: #ff5722;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
+    </style>
+    </head>
+    <body>
+    
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">Nightlife & Clubs</a>
+            <a class=""href="#" class="active">Home</a>
+            <a href="#">booths</a>
+            <a href="#">Book a Table</a>
+            <a href="#">About us</a>
+            <a href="#">contact us</a>
+        </nav>
+    <div class="container">
+        <!-- <section class="section full-width">
+            <h2>Custom Price Setting</h2>
+            <div class="info-box">
+                <iframe width="100%" height="315" src="Images/Restaurant Ad Video Template (Editable).mp4" allowfullscreen></iframe>
+                <p>Experience the mouthwatering cuisine of The G.T. Road in this enticing video showcase.</p> 
+           
+            
+                
+           
+        </section> -->
+    
+        <section class="section">
+            <h2>Type 2 Booth Details</h2>
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" required>
+            </div>
+            <div class="input-group">
+                <label for="guests">Number of Persons</label>
+                    <select id="guests">
+                        <option>1 Person</option>
+                        <option>2 Persons</option>
+                        <option>3 Persons</option>
+                        <option>4 Persons</option>
+                        <option>5+ Persons</option>
+                    </select>
+           
+
+            </div>
+            <div class="input-group">
+                <label for="info">Info</label>
+                <textarea id="info" rows="3" readonly>Nulla ac ante in arcu finibus tincidunt quis at magna. Phasellus semper faucibus nisi eget tincidunt.</textarea>
+            </div>
+            <div class="input-group">
+                <label for="price">Price</label>
+                <input type="text" id="price" value="€120.00" readonly>
+            </div>
+            <img src="Images/download club.jpeg" alt="Interior of a modern, stylish booth with blue lighting and comfortable seating">
+        </section>
+    
+        <section class="section">
+            <h2>Book a Table at The G.T. Road</h2>
+            <div class="input-group">
+                <label for="guests">Number of guest(s)</label>
+                <input type="number" id="guests" value="1">
+               
+            </div>
+            <div class="date-selector">
+           
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                
+              
+            </div>
+            <h3>Select the time of day to see the offers</h3>
+            <div class="time-slot">
+                <h4>Lunch</h4>
+                <p>12:00 PM to 4:30 PM</p>
+                <select>
+                    <option>12:00 PM</option>
+                    <option>02:30 PM</option>
+                        <option>3:00 PM</option>
+                        <option>3:45 PM</option>
+                    
+
+                </select>
+            </div>
+            <div class="time-slot">
+                <h4>Dinner</h4>
+                <p>07:00 PM to 12:00 PM</p>
+                <select>
+                    <option>8:00 PM</option>
+                    <option>9:30 PM</option>
+                        <option>10:00 PM</option>
+                        <option>11:30 PM</option>
+                
+                </select>
+            </div>
+            <button type="submit" id="btnid" class="pay-button">Book a Table</button>
+        </section>
+    
+        <section class="section full-width">
+            <h2>The G.T. Road</h2>
+            <p>Connaught Place, The GT Road takes one on a gastronomical journey from... <a href="#">read more</a></p>
+            <div class="restaurant-info">
+                <span class="icon">🍽️</span>
+                <div>
+                    <strong>CUISINE</strong><br>
+                    North Indian
+                </div>
+            </div>
+            <div class="restaurant-info">
+                <span class="icon">🏠</span>
+                <div>
+                    <strong>ESTABLISHMENT TYPE</strong><br>
+                    Casual Dining
+                </div>
+            </div>
+            <div class="restaurant-info">
+                <span class="icon">🌟</span>
+                <div>
+                    <strong>MUST TRY</strong><br>
+                    GTR Flavored Mojitos, Vodka Srikhand, Jamun-tini, Imli Margarita, Sharabi Gulab Jamun, Masala Chai Rum
+                </div>
+            </div>
+            <div class="restaurant-info">
+                <span class="icon">💰</span>
+                <div>
+                    <strong>AVERAGE COST</strong><br>
+                    ₹2,000* for 2
+                </div>
+            </div>
+            <h3>FEATURES & FACILITIES</h3>
+            <div class="features">
+                <span class="feature">Air Conditioned</span>
+                <span class="feature">Wifi</span>
+                <span class="feature">Serves Alcohol</span>
+                <span class="feature">Parking</span>
+                <span class="feature">Cards Accepted</span>
+                <span class="feature">Wallet Accepted</span>
+            </div>
+            <button class="pay-button">Pay Bill Via Zwigato™ App</button>
+        </section>
+    </div>
+    
+    <script>
+        btnid=document.getElementById("btnid");
+    btnid.addEventListener('click', function() {
+        alert("table booked");
+    });
+  
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,51 @@
+.hero {
+    height: 50vh;
+    background: url('nightlife-bg.jpg') center/cover no-repeat;
+    background-color: #e1af6d;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: black;
+    font-size: 1.2rem;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+.card img {
+    height: 200px;
+ 
+    object-fit: cover;
+}
+.icon-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.icon-container {
+    text-align: center;
+    margin: 20px;
+}
+.icon-container i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.event-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.arrow {
+    font-size: 24px;
+    color: black; /* Adjust this color to match the arrows in the image */
+}
+  

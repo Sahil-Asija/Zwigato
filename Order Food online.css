@@ -1,0 +1,1027 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/*Navigation menu*/
+nav {
+	margin: 0px;
+    padding: 0px;
+	display: flex;
+	justify-content:space-between;
+	text-align: center;
+	color:#fffdfd;
+	background-color: #e1af6d;
+	padding-top: 5px;
+    padding-bottom: 5px;
+	max-width: 100%;
+	width:100%;
+}
+
+nav a {
+	color: #fffdfd;
+	text-decoration: none;
+}
+
+nav .navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .navbar a {
+	padding-right: 30px;
+	font-size: 18px;
+}
+
+
+.Explore {
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fde3c9;
+}
+
+#box {
+    width: 130px;
+    height: 110px;
+    border: 1px white solid;
+    border-radius: 20px;
+    background-color: white;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Explore1 {
+    line-height: 5px;
+    text-align: center;
+}
+
+.Food {
+    background-color: #fde3c9;
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+}
+
+.Food::-webkit-scrollbar{
+    height: 0px;
+}
+
+.box2 {
+    margin: 10px;
+    padding-left: 30px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.img {
+    border: 1px #fde3c9 solid;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bacBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 13px;
+    top: 53%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+} 
+
+#nextBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 13px;
+    top: 53%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+} 
+
+#main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 170vh;
+}
+
+.main-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.inner-main-box {
+    height: 20%;
+    background-color: #fde3c9;
+    height: 170px;
+    width: 20%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scale(1);
+}
+
+.inner-main-box img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.most-inner-main-box{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.aboutRestaurant{
+    border: none;
+}
+
+.restaurantName{
+    display: inline-block;
+    line-height: 7px;
+    padding-left: 3px;
+}
+
+.aboutRestaurant{
+    width: 15%;
+    cursor: pointer;
+    background-color:#fde3c9;
+    outline: none;
+    
+}
+/*Footer bar*/
+.footer-bar {
+	background-color: #F8F8F8;
+	padding-top: 50px;
+}
+
+.footer-bar .footer-lang {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 12vh;
+}
+
+.footer-bar .footer-lang img.footer-logo {
+	height: 80px;
+}
+
+.footer-bar .footer-lang a.lang-btn {
+	text-decoration: none;
+	font-size: 16px;
+	color: #1c1c1c;
+	padding: 8px 5px;
+	border: 1px solid #b5b5b5;
+	border-radius: 8px;
+	margin-right: 15px;
+}
+
+.footer-bar .footer-last-links {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.footer-bar .footer-last-links ul li{
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+.footer-bar .footer-last-links h4.footer-list-title {
+	margin-bottom: 10px;
+	letter-spacing: 0.2rem;
+	font-size: 14px;
+}
+
+.footer-bar .footer-last-links ul li a {
+	text-decoration: none;
+	color: #696969;
+	font-size: 14px;
+}
+
+.footer-bar .footer-last-links ul li a:hover {
+	color: #1c1c1c;
+}
+
+.footer-bar .footer-last-links .footer-social-icons {
+	margin-bottom: 20px;
+}
+
+.footer-bar .footer-last-links .footer-social-icons a {
+	color: #1c1c1c;
+}
+
+.footer-bar .footer-last-links .footer-social-icons .fa-facebook,
+.footer-bar .footer-last-links .footer-social-icons .fa-twitter,
+.footer-bar .footer-last-links .footer-social-icons .fa-instagram {
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.footer-bar .footer-copyright {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	border-top: 1px solid #cfcfcf;
+}
+
+/* main menu */
+#starbucks-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#DessertClub-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#BaskinRobbins-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Bikanervala-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#BurgerKing-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Barista-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Celejor-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Domino-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Haldiram-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#WoW-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Keventers-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#LaPino-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#McDonald-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Nik-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Subway-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Super-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#TheBelgianWaffle-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#TimHortons-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Barbeque-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Dosa-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Sagar-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Havmor-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Dimsum-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+#Roll-outer-menu{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    width: 99.4%;
+    backdrop-filter: blur(5px);
+}
+
+.menu{
+    height: 100vh;
+    overflow-y: scroll;
+    width: 41%;
+    margin-left: 32.5%;
+}
+
+.menu::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
+ /* edit */
+
+#menu-cross{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross1{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross3{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross4{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross5{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross6{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross7{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross8{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross9{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross10{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross11{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross12{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross13{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross14{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross15{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross16{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross17{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross18{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross19{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross20{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross21{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross22{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#menu-cross23{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:69%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#menu-cross img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross1 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross2 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross3 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross4 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross5 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross6 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross7 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross8 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross9 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross10 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross11 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross12 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross13 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross14 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross15 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross16 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross17 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross18 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross19 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross20 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross21 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross22 img{
+    width: 100%;
+    filter: invert(1);
+}
+#menu-cross23 img{
+    width: 100%;
+    filter: invert(1);
+}
+
+
+
+
+
+
+.addCart{
+    display: flex;
+    justify-content: space-between;
+    width: 62%;
+}
+
+.AddCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background-color: rgba(255, 136, 0, 0.693);
+    border-radius: 8px;
+    cursor: pointer;
+    height: 25px;
+}
+
+.iconsCart{
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.iconsCart button{
+    width: 40%;
+    border: none;
+    background-color: rgba(255, 136, 0, 0.693);
+    border-radius: 8px;
+    cursor: pointer;
+    height: 25px;
+    font-size: 1rem;
+}
+
+.outer-addCart{
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+
+.menu-container {
+    background-color: #fde3c9;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%; 
+}
+.menu-main-box{
+    padding: 10px;
+    line-height:25px;
+}
+.menu-section{
+    padding: 10px;
+    
+}
+.menu-box1{
+    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+}
+.menu-img{
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px #ffbc56;
+}
+.dotted{
+    border: 1px black dashed;
+}
+#menu-id-box1{
+    display: inline-block;
+    max-width: 75%;
+}
+.code{
+    margin: 10px;
+    display: inline-block;
+}
+.Coffee{
+    line-height: 25px;
+}
+.location1{
+    margin: 10px;
+    line-height: 25px;
+}
+.location{
+    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    font-size:large;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+#outer-cart{
+    width: 25%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inner-cart{
+    background-color: #fde3c9;
+    list-style: none;
+    width: 100%;
+    height: 95%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-ele{
+    margin-top: 10px;
+    width: 95%;
+    height: 100px;
+    background-color: rgb(255, 208, 151);
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.cart-ele img{
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    height: 100%;
+    width: 40%;
+}
+
+.restaurant-cart{
+    width: 55%;
+    height: 90%;
+}
+
+#cart-items{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    overflow-y: scroll;
+}
+
+#cart-items::-webkit-scrollbar{
+    width: 0;
+}
+
+.cart-item-ele{
+    /* border: 1px solid; */
+    height: 80px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 11px;
+}
+
+#totalAmount{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
