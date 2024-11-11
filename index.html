@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Zwigato</title>
+    <title>Zwigato</title>
     <script src="https://kit.fontawesome.com/8e36f69ff4.js" crossorigin="anonymous"></script>
     <style>
-        *{
+        /* Styles retained from the original code */
+        * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        body{
+        body {
             height: 100%;
             width: 100%;
         }
-        .full{
+        .full {
             background-image: url('Images/and.png');
             background-size: cover;
             padding-top: 73px;
@@ -25,32 +26,26 @@
             justify-content: center;
             text-align: center;
         }
-        .container{
+        .container {
             height: 645px;
             width: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
         }
-        .box{
+        .box {
             height: 450px;
             width: 300px;
             border-radius: 5px;
             text-align: center;
         }
-        .box img{
+        .box img {
             height: 400px;
             width: 290px;
             border-radius: 5px;
         }
-        .second{
-            border-radius: 50px;
-        }
-        .third img{
-            width: 300px;
-        }
         h3 {
-            color: white;
+            color: rgb(0, 0, 0);
         }
         .modal {
             display: none;
@@ -65,7 +60,7 @@
             z-index: 1000;
         }
         .modal-content {
-            background: white;
+            background: black;
             padding: 30px;
             border-radius: 15px;
             text-align: center;
@@ -78,7 +73,7 @@
         .modal-content h2 {
             font-size: 2em;
             margin-bottom: 20px;
-            color: #333;
+            color: #b0b4bc;
         }
         .modal-content input {
             margin: 10px 0;
@@ -125,8 +120,8 @@
             background-color: #ff6347;
             color: white;
         }
-        #btn{
-            background-color:#e1af6d;
+        #btn {
+            background-color: #e1af6d;
             border: none;
             color: white;
             padding: 10px 20px;
@@ -142,36 +137,32 @@
 </head>
 <body>
     <div class="full">
-        <h1 style="color:white;padding-bottom: 37px;"></h1>
         <div class="container">
             <div class="box first">
                 <img src="Images/food4.webp" alt="Log In">
                 <button id="btn" onclick="openModal('loginModal')"><h3>LogIn</h3></button>
             </div>
             <div class="box second">
-                <!-- <p style="margin-bottom: 40px; color: white;">Zwigato is a food ordering website that lets users explore menus, place orders for delivery or pickup, and track their orders in real-time.</p> -->
                 <img src="Images/food5.webp" alt="Sign Up">
                 <button id="btn" onclick="openModal('signupModal')"><h3>SignUp</h3></button>
             </div>
             <div class="box third">
-                <img src="Images/food6.webp" alt="ZWIGATO PRO">
-                <a href="pro.html"><button id="btn"><h3>ZWIGATO PRO</h3></button></a>
+                <img src="Images/food6.webp" alt="ZWIGATO">
+                <a href="pro.html"><button id="btn"><h3>Partner with Zwigato™</h3></button></a>
             </div>
         </div>
     </div>
-    <div class="modal" id="loginModal" >
-        <div class="modal-content" style="background-color: black;">
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
             <span class="close" onclick="closeModal('loginModal')">&times;</span>
             <h2>Login</h2>
             <input type="text" id="loginUser" placeholder="Username">
             <input type="password" id="loginPass" placeholder="Password">
             <button onclick="login()">Login</button>
-            <br>
-            <p style="color: antiquewhite ;margin-top: 10px;">New to the site? <a style="text-decoration: none;color: antiquewhite;" href="#" onclick="openModal('signupModal')">Sign up</a></p>
         </div>
     </div>
     <div class="modal" id="signupModal">
-        <div class="modal-content" style="background-color: black;">
+        <div class="modal-content">
             <span class="close" onclick="closeModal('signupModal')">&times;</span>
             <h2>Sign Up</h2>
             <input type="text" id="signupUser" placeholder="Username">
@@ -180,57 +171,48 @@
             <input type="password" id="signupConfirmPass" placeholder="Confirm Password">
             <button onclick="signup()">Sign Up</button>
         </div>
-    </div>
+    </div>
     <script>
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = 'flex';
-    }
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-    if (modalId === 'loginModal') {
-        document.getElementById('loginUser').value = '';
-        document.getElementById('loginPass').value = '';
-    } else if (modalId === 'signupModal') {
-        document.getElementById('signupUser').value = '';
-        document.getElementById('signupEmail').value = '';
-        document.getElementById('signupPass').value = '';
-        document.getElementById('signupConfirmPass').value = '';
-    }
-    }
-    function signup() {
-    let username = document.getElementById('signupUser').value.trim();
-    let email = document.getElementById('signupEmail').value.trim();
-    let password = document.getElementById('signupPass').value;
-    let confirmPassword = document.getElementById('signupConfirmPass').value;
-    if (!username || !email || !password || !confirmPassword) {
-        alert('Please fill in all fields.');
-        return;
-    }
-    if (password !== confirmPassword) {
-        alert("Passwords do not match!");
-        return;
-    }
-    let userData = {
-        username: username,
-        email: email,
-        password: password
-    };
-    localStorage.setItem('userData', JSON.stringify(userData));
-    alert('Signup successful! Please log in.');
-    closeModal('signupModal');
-    openModal('loginModal');
-}
-function login() {
-    let username = document.getElementById('loginUser').value.trim();
-    let password = document.getElementById('loginPass').value;
-    let storedUserData = JSON.parse(localStorage.getItem('userData'));
-    if (storedUserData && username === storedUserData.username && password === storedUserData.password) {
-        window.location.href = 'main.html';
-        closeModal('loginModal');
-    } else {
-        alert('Incorrect username or password!');
-    }
-}
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function signup() {
+            const username = document.getElementById('signupUser').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const password = document.getElementById('signupPass').value;
+            const confirmPassword = document.getElementById('signupConfirmPass').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push({ username, email, password });
+            localStorage.setItem('users', JSON.stringify(users));
+            alert('Sign up successful! Please log in.');
+            closeModal('signupModal');
+            openModal('loginModal');
+        }
+
+        function login() {
+            const username = document.getElementById('loginUser').value.trim();
+            const password = document.getElementById('loginPass').value;
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            const user = users.find(u => u.username === username && u.password === password);
+            if (user) {
+                sessionStorage.setItem('username', username);
+                window.location.href = 'main.html';
+            } else {
+                alert('Invalid login credentials.');
+            }
+        }
     </script>
 </body>
 </html>

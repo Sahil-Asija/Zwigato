@@ -102,16 +102,24 @@
             </div>
             <div>
                 <h2 class="cash">PAY ON DELIVERY</h2>
-                <div id="box5">
-                    <img src="Images\COD_icon.png " alt="" width="25">
-                    <div id="text5">
-                        <p style="font-weight: bolder;">Pay on Delivery (Cash/UPI)</p>
-                        <p style="line-height: 10px;"> Pay cash to delivery partner or ask for QR code to pay via UPI
-                        </p>
+                <button style="width: 100%; border: none; cursor: pointer;" onclick="navigate()">
+                    <div id="box5">
+                        <img src="Images\COD_icon.png " alt="" width="25">
+                        <div id="text5">
+                            <p style="font-weight: bolder; width: 193px; font-size: 15px;">Pay on Delivery (Cash/UPI)</p>
+                            <p style="line-height: 10px;"> Pay cash to delivery partner or ask for QR code to pay via UPI
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </button>
             </div>
         </div>
+        <script>
+            function navigate(){
+                alert("Your order has been placed");
+                window.location.href = "main.html";
+            }
+        </script>
 </body>
 
 </html>

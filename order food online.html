@@ -8,8 +8,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="Order Food online.css" />
 </head>
-
-<body>
+<script>
+  const username = localStorage.getItem("message");
+  function displayUsername() {
+    if (username) {
+      document.getElementById('user-display').innerHTML = `Welcome, ${username}!`;
+    }
+  }
+</script>
+<body onload="displayUsername()">
    	<!-- Header showcase-->
 	<header class="showcase">
 		<nav>
@@ -17,7 +24,7 @@
 					<a href="main.html"><img src="Images\Logo11.png" width="140"></a>
 				</div>
 				<div class="navbar">
-					<a href="index.html">Log in</a>
+					<a id="user-display" href="index.html">Log in</a>
 					<a href="a.html">About us</a>
 					<a href="Contact.html">Contact us</a>
 				
@@ -1063,30 +1070,30 @@
           <button id="menu-cross1">
             <img src="Images/cross.svg" alt="" />
           </button>
-          <img src="Images/starbucks.webp" width="100%" />
+          <img src="Images/99 waffle.jpg" width="100%" />
           <div class="menu-main-box">
-            <h2>Starbucks</h2>
-            <p>Cafe, Coffee, Beverages, Fast Food, Desserts</p>
-            <p>Matunga East, Mumbai</p>
+            <h2>The Dessert Club</h2>
+            <p>Ice Cream, Desserts, Beverages, Fast Food, Street Food</p>
+            <p>Model Town, Mumbai</p>
             <p>8am - 12midnight (Today)</p>
           </div>
           <hr style="border: 1px black groove" />
           <div class="menu-section">
-            <h2>Exclusive Classic combos -Dinner & LateNight.</h2>
+            <h2>Live Ice-Cream Rolls Sundae</h2>
             <div class="menu-box1">
               <div id="box1">
-                <h4 class="productName">Tall Java Chip Frappuccino with Paneer Tikka Sandwich</h4>
-                <p class="price">₹635</p>
+                <h4 class="productName">After Eight Chocolate Ice-Cream Rolls</h4>
+                <p class="price">₹189.52</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Tall Java Chip Frappuccino with Paneer Tikka Sandwich"
-                    data-price="635">Add Cart</button>
+                  <button class="AddCart" data-name="After Eight Chocolate Ice-Cream Rolls"
+                    data-price="189.52">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Tall Java Chip Frappuccino with Paneer Tikka Sandwich"
-                      data-price="635">-</button>
-                    <button class="AddCartIcons" data-name="Tall Java Chip Frappuccino with Paneer Tikka Sandwich"
-                      data-price="635">+</button>
+                    <button class="RemoveCartIcons" data-name="After Eight Chocolate Ice-Cream Rolls"
+                      data-price="189.52">-</button>
+                    <button class="AddCartIcons" data-name="After Eight Chocolate Ice-Cream Rolls"
+                      data-price="189.52">+</button>
                   </div>
                 </div>
                 <img class="menu-img" src="Images/Tall Java Chip Frappuccino with Paneer Tikka Sandwich.avif"
@@ -1095,38 +1102,38 @@
             </div>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Picco Classic Hot Coffee with Chicken Salad Sandwich</h4>
-                <p>₹420</p>
+                <h4>Club Special Fresh Fruit Sundae</h4>
+                <p>₹294.29</p>
               </div>
                 <div class="outer-addCart">
                   <div class="addCart">
-                    <button class="AddCart" data-name="Picco Classic Hot Coffee with Chicken Salad Sandwich"
-                      data-price="420">Add Cart</button>
+                    <button class="AddCart" data-name="Club Special Fresh Fruit Sundae"
+                      data-price="294.29">Add Cart</button>
                     <div class="iconsCart">
-                      <button class="RemoveCartIcons" data-name="Picco Classic Hot Coffee with Chicken Salad Sandwich"
-                        data-price="420">-</button>
-                      <button class="AddCartIcons" data-name="Picco Classic Hot Coffee with Chicken Salad Sandwich"
-                        data-price="420">+</button>
+                      <button class="RemoveCartIcons" data-name="Club Special Fresh Fruit Sundae"
+                        data-price="294.29">-</button>
+                      <button class="AddCartIcons" data-name="Club Special Fresh Fruit Sundae"
+                        data-price="294.29">+</button>
                     </div>
                   </div>
-                  <img class="menu-img" src="Images/Picco Classic Hot Coffee with Chicken Salad Sandwich.avif"
+                  <img class="menu-img" src="Images/Club Special Fresh Fruit Sundae.avif"
                     width="100px" />
                 </div>
             </div>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Short Classic Iced Coffee with Chilli Paneer Sandwich</h4>
-                <p>₹490</p>
+                <h4>Kinder Bueno Ice-Cream Rolls</h4>
+                <p>₹189.52</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Short Classic Iced Coffee with Chilli Paneer Sandwich"
-                    data-price="490">Add Cart</button>
+                  <button class="AddCart" data-name="Kinder Bueno Ice-Cream Rolls"
+                    data-price="189.52">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Short Classic Iced Coffee with Chilli Paneer Sandwich"
-                      data-price="490">-</button>
-                    <button class="AddCartIcons" data-name="Short Classic Iced Coffee with Chilli Paneer Sandwich"
-                      data-price="490">+</button>
+                    <button class="RemoveCartIcons" data-name="Kinder Bueno Ice-Cream Rolls"
+                      data-price="189.52">-</button>
+                    <button class="AddCartIcons" data-name="Kinder Bueno Ice-Cream Rolls"
+                      data-price="189.52">+</button>
                   </div>
                 </div>
                 <img class="menu-img" src="Images/Short Classic Iced Coffee with Chilli Paneer Sandwich.avif"
@@ -1136,128 +1143,128 @@
           </div>
           <hr class="dotted" />
           <div class="menu-section">
-            <h2>Frappuccino</h2>
+            <h2>Bubble Waffle</h2>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Cookie Crème Crème Frappuccino</h4>
-                <p>₹470</p>
+                <h4>Nutella Bubble Waffle</h4>
+                <p>₹360.95</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Cookie Crème Crème Frappuccino"
-                    data-price="470">Add Cart</button>
+                  <button class="AddCart" data-name="Nutella Bubble Waffle"
+                    data-price="360.95">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Cookie Crème Crème Frappuccino"
-                      data-price="470">-</button>
-                    <button class="AddCartIcons" data-name="Cookie Crème Crème Frappuccino"
-                      data-price="470">+</button>
+                    <button class="RemoveCartIcons" data-name="Nutella Bubble Waffle"
+                      data-price="360.95">-</button>
+                    <button class="AddCartIcons" data-name="Nutella Bubble Waffle"
+                      data-price="360.95">+</button>
                   </div>
                 </div>
-                <img class="menu-img" src="Images/Cookie Crème Crème Frappuccino.avif"
+                <img class="menu-img" src="Images/Nutella Bubble Waffle.avif"
                   width="100px" />
               </div>
             </div>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Pumpkin Spice Crème Frappuccino</h4>
-                <p>₹470</p>
+                <h4>Oreo Bubble Waffle</h4>
+                <p>₹237.14</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Pumpkin Spice Crème Frappuccino"
-                    data-price="470">Add Cart</button>
+                  <button class="AddCart" data-name="Oreo Bubble Waffle"
+                    data-price="237.14">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Pumpkin Spice Crème Frappuccino"
-                      data-price="470">-</button>
-                    <button class="AddCartIcons" data-name="Pumpkin Spice Crème Frappuccino"
-                      data-price="470">+</button>
+                    <button class="RemoveCartIcons" data-name="Oreo Bubble Waffle"
+                      data-price="237.14">-</button>
+                    <button class="AddCartIcons" data-name="Oreo Bubble Waffle"
+                      data-price="237.14">+</button>
                   </div>
                 </div>
-                <img class="menu-img" src="Images/Pumpkin Spice Crème Frappuccino.webp"
+                <img class="menu-img" src="Images/Oreo Bubble Waffle.jpeg"
                   width="100px" />
               </div>
             </div>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Saffron Pistachio Frappuccino</h4>
-                <p>₹470</p>
+                <h4>Red Velvet Bubble Waffle</h4>
+                <p>₹237.14</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Saffron Pistachio Frappuccino"
-                    data-price="470">Add Cart</button>
+                  <button class="AddCart" data-name="Red Velvet Bubble Waffle"
+                    data-price="237.14">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Saffron Pistachio Frappuccino"
-                      data-price="470">-</button>
-                    <button class="AddCartIcons" data-name="Saffron Pistachio Frappuccino"
-                      data-price="470">+</button>
+                    <button class="RemoveCartIcons" data-name="Red Velvet Bubble Waffle"
+                      data-price="237.14">-</button>
+                    <button class="AddCartIcons" data-name="Red Velvet Bubble Waffle"
+                      data-price="237.14">+</button>
                   </div>
                 </div>
-                <img class="menu-img" src="Images/Saffron Pistachio Frappuccino.avif"
+                <img class="menu-img" src="Images/Red Velvet Bubble Waffle.jpeg"
                   width="100px" />
               </div>
             </div>
           </div>
           <hr class="dotted" />
           <div class="menu-section">
-            <h2>Hot</h2>
+            <h2>Hot Brownie Sundae</h2>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Pumpkin Spice Latte</h4>
-                <p>₹395</p>
+                <h4>Brownie With Hot Choco Sundae</h4>
+                <p>₹122.86</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Pumpkin Spice Latte"
-                    data-price="395">Add Cart</button>
+                  <button class="AddCart" data-name="Brownie With Hot Choco Sundae"
+                    data-price="122.86">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Pumpkin Spice Latte"
-                      data-price="395">-</button>
-                    <button class="AddCartIcons" data-name="Pumpkin Spice Latte"
-                      data-price="395">+</button>
+                    <button class="RemoveCartIcons" data-name="Brownie With Hot Choco Sundae"
+                      data-price="122.86">-</button>
+                    <button class="AddCartIcons" data-name="Brownie With Hot Choco Sundae"
+                      data-price="122.86">+</button>
                   </div>
                 </div>
-                <img class="menu-img" src="Images/Pumpkin Spice Latte.avif"
+                <img class="menu-img" src="Images/Brownie With Hot Choco Sundae.avif"
                   width="100px" />
               </div>
             </div>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Cookie Creme Latte</h4>
-                <p>₹395</p>
+                <h4>Walnut Brownie with Hot Chocolate Sauce</h4>
+                <p>₹130</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Cookie Creme Latte"
-                    data-price="395">Add Cart</button>
+                  <button class="AddCart" data-name="Walnut Brownie with Hot Chocolate Sauce"
+                    data-price="130">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Cookie Creme Latte"
-                      data-price="395">-</button>
-                    <button class="AddCartIcons" data-name="Cookie Creme Latte"
-                      data-price="395">+</button>
+                    <button class="RemoveCartIcons" data-name="Walnut Brownie with Hot Chocolate Sauce"
+                      data-price="130">-</button>
+                    <button class="AddCartIcons" data-name="Walnut Brownie with Hot Chocolate Sauce"
+                      data-price="130">+</button>
                   </div>
                 </div>
-                <img class="menu-img" src="Images/Cookie Creme Latte.avif"
+                <img class="menu-img" src="Images/Walnut Brownie with Hot Chocolate Sauce.avif"
                   width="100px" />
               </div>
             </div>
             <div class="menu-box1">
               <div id="menu-id-box1">
-                <h4>Saffron Pistachio Latte</h4>
-                <p>₹395</p>
+                <h4>Sizzling Choco Chips Brownie with Vanilla Ice Cream</h4>
+                <p>₹160</p>
               </div>
               <div class="outer-addCart">
                 <div class="addCart">
-                  <button class="AddCart" data-name="Saffron Pistachio Latte"
-                    data-price="395">Add Cart</button>
+                  <button class="AddCart" data-name="Sizzling Choco Chips Brownie with Vanilla Ice Cream"
+                    data-price="160">Add Cart</button>
                   <div class="iconsCart">
-                    <button class="RemoveCartIcons" data-name="Saffron Pistachio Latte"
-                      data-price="395">-</button>
-                    <button class="AddCartIcons" data-name="Saffron Pistachio Latte"
-                      data-price="395">+</button>
+                    <button class="RemoveCartIcons" data-name="Sizzling Choco Chips Brownie with Vanilla Ice Cream"
+                      data-price="160">-</button>
+                    <button class="AddCartIcons" data-name="Sizzling Choco Chips Brownie with Vanilla Ice Cream"
+                      data-price="160">+</button>
                   </div>
                 </div>
-                <img class="menu-img" src="Images/Saffron Pistachio Latte.avif"
+                <img class="menu-img" src="Images/Sizzling Choco Chips Brownie with Vanilla Ice Cream.jpg"
                   width="100px" />
               </div>
             </div>

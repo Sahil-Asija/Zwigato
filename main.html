@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Zwigato | Mumbai</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwigato | Mumbai</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-	<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
+    <script>
+        // Function to display the username
+		const username = sessionStorage.getItem('username'); // Retrieve username from session storage
+		function ToNavigate(){
+			localStorage.setItem("message", username);
+			window.location.href = "order food online.html";
+		}
+        function displayUsername() {
+            if (username) {
+                document.getElementById('user-display').innerHTML = `Welcome, ${username}`;
+            }
+        }
+    </script>
 </head>
-<body>
-	<!-- Header showcase-->
-	<header class="showcase">
-			<nav>
-				<div>
-					<img src="Images\Logo11.png" width="140">
-					<!-- <a href="#"><i class="fa fa-mobile-alt"></i> Get the App</a> -->
-				</div>
-				<div class="right-menu">
-					<a href="index.html">Log in</a>
-					<a href="a.html">About us</a>
-					<a href="Contact.html">Contact us</a>
-				
-				</div>
-			</nav>
-			<div class="hero-text">
-				<!-- <img src="Images\Logo.png" width="300"> -->
-				<h1>Discover the best food & drinks in <span class="bold-place">Mumbai</span></h1>
-				<div class="search-bar">
-					<div class="search-3">
-						<i class="fa fa-map-marker-alt"></i>
-						<input type="text" placeholder="Mumbai">
-						<i class="fa fa-caret-down"></i>
-					</div>
-					<div class="search-2">
-						<i class="fas fa-search"></i>
-						<input type="text" class="search-right" placeholder="Search for restaurant" >				
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+<body onload="displayUsername()">
+    <!-- Header showcase-->
+    <header class="showcase">
+        <nav>
+            <div>
+                <img src="Images/Logo11.png" width="140">
+            </div>
+            <div class="right-menu">
+                <a id="user-display" href="index.html">Log in</a>
+                <a href="a.html">About us</a>
+                <a href="Contact.html">Contact us</a>
+            </div>
+        </nav>
+        <div class="hero-text">
+            <h1>Discover the best food & drinks in <span class="bold-place">Mumbai</span></h1>
+            <div class="search-bar">
+                <div class="search-3">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Mumbai">
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="search-2">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-right" placeholder="Search for restaurant">
+                </div>
+            </div>
+        </div>
+    </header>
 
 	<!-- Order section -->
 	<section class="container">
 		<div class="order-cat">
 			<div class="hover">
-				<a href="order food online.html"><img src="Images\order1.webp"></a>
+				<!-- <a href="order food online.html"><img src="Images\order1.webp"></a> -->
+				<a onclick="ToNavigate()"><img src="Images\order1.webp"></a>
 				<div class="order-title-bg">
 					<p class="order-title">Order Food Online</p>
 				</div>
@@ -80,28 +90,28 @@
 		</div>
 		<div class="collection-grid">
 			<div class="collection-box">
-				<img src="Images\collection1.jpg">
+				<a href="https://mumbaitourism.travel/top-places-to-visit-in-mumbai"><img src="Images\collection1.jpg"></a>
 				<div class="collection-title">
 					<h3>Best of Mumbai</h3>
 					<p>220 Places <i class="fa fa-caret-right"></i></p>
 				</div>
 			</div>
 			<div class="collection-box">
-				<img src="Images\collection2.jpg">
+				<a href="https://www.cntraveller.in/story/these-are-the-12-best-restaurants-in-mumbai-right-now-top-restaurant-awards/"><img src="Images\collection2.jpg"></a>
 				<div class="collection-title">
 					<h3>Trending This Week</h3>
 					<p>30 Places <i class="fa fa-caret-right"></i></p>
 				</div>
 			</div>
 			<div class="collection-box">
-				<img src="Images\collection3.jpg">
+				<a href="https://curlytales.com/new-restaurants-in-mumbai-you-have-to-try-this-month/"><img src="Images\collection3.jpg"></a>
 				<div class="collection-title">
 					<h3>Newly Opened</h3>
 					<p>7 Places <i class="fa fa-caret-right"></i></p>
 				</div>
 			</div>
 			<div class="collection-box">
-				<img src="Images\collection4.webp">
+				<a href="https://coworkingers.com/best-work-cafe-in-mumbai/"><img src="Images\collection4.webp"></a>
 				<div class="collection-title">
 					<h3>Work Friendly Places!</h3>
 					<p>19 Places <i class="fa fa-caret-right"></i></p>

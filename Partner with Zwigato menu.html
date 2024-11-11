@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            padding: 20px;
+            background-image: url("Images/menu.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            animation: fadeIn 0.8s ease-in-out;
+            margin-top: 10px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #e1af6d;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            flex: 1 1 45%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #e1af6d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #d8985c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #e1af6d;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .actions button {
+            padding: 5px 10px;
+            margin: 2px;
+            font-size: 0.9em;
+        }
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .search-container input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        tbody {
+            display: block;
+            max-height: 300px;
+            overflow-y: auto;
+            width: 100%;
+        }
+        tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Menu Management</h1>
+        <div id="restaurant-info">
+            <h2 id="restaurant-name"></h2>
+            <p id="restaurant-address"></p>
+            <p id="contact-number"></p>
+        </div>
+        <form id="menuForm">
+            <input type="text" placeholder="Enter food item" id="foodItem" required>
+            <input type="number" placeholder="Enter price" id="price" required>
+            <button type="submit" id="addBtn">Add Item</button>
+        </form>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a food item...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <table id="menuTable">
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Food items will be added here -->
+            </tbody>
+        </table>
+        <!-- Final Submit Button -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="finalSubmitBtn">Final Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("menuForm");
+        const foodInput = document.getElementById("foodItem");
+        const priceInput = document.getElementById("price");
+        const tableBody = document.getElementById("menuTable").querySelector("tbody");
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+
+        let menu = JSON.parse(localStorage.getItem("menu")) || [];
+        let editIndex = null;
+
+        function renderTable(data = menu) {
+            tableBody.innerHTML = "";
+            data.forEach((item, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${item.food}</td>
+                    <td>₹${item.price}</td>
+                    <td class="actions">
+                        <button onclick="editItem(${index})">Edit</button>
+                        <button onclick="deleteItem(${index})">Delete</button>
+                    </td>`;
+                tableBody.appendChild(row);
+            });
+        }
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const food = foodInput.value;
+            const price = parseFloat(priceInput.value).toFixed(2);
+
+            if (editIndex === null) {
+                menu.push({ food, price });
+            } else {
+                menu[editIndex] = { food, price };
+                editIndex = null;
+            }
+            localStorage.setItem("menu", JSON.stringify(menu));
+            foodInput.value = "";
+            priceInput.value = "";
+            renderTable();
+        });
+
+        function deleteItem(index) {
+            menu.splice(index, 1);
+            localStorage.setItem("menu", JSON.stringify(menu));
+            renderTable();
+        }
+
+        function editItem(index) {
+            foodInput.value = menu[index].food;
+            priceInput.value = menu[index].price;
+            editIndex = index;
+        }
+
+        searchBtn.addEventListener("click", () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredMenu = menu.filter(item => 
+                item.food.toLowerCase().includes(searchTerm) ||
+                item.price.includes(searchTerm)
+            );
+
+            renderTable(filteredMenu);
+        });
+
+        // Final Submit Button click event to redirect
+        document.getElementById("finalSubmitBtn").addEventListener("click", function() {
+            window.location.href = "startingpage.html";
+        });
+
+        renderTable();
+        const restaurantDetails = JSON.parse(localStorage.getItem("restaurantDetails"));
+        if (restaurantDetails) {
+            document.getElementById("restaurant-name").innerText = restaurantDetails.restaurantName;
+            document.getElementById("restaurant-address").innerText = restaurantDetails.restaurantAddress;
+            document.getElementById("contact-number").innerText = `Contact:${restaurantDetails.contactNumber}`;
+        }
+    </script>
+</body>
+</html>
